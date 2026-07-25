@@ -278,7 +278,8 @@ ul {
   width: min(220px, 48vw);
   height: auto;
   margin: 0 auto 2rem;
-  filter: drop-shadow(0 0 40px rgba(180, 180, 190, 0.15));
+  /* SVlogo1.svg is black fill — invert for silver on dark bg */
+  filter: invert(1) brightness(0.92) drop-shadow(0 0 40px rgba(180, 180, 190, 0.2));
   animation: logo-in 1.4s var(--ease) both;
 }
 
@@ -286,12 +287,12 @@ ul {
   from {
     opacity: 0;
     transform: scale(0.92);
-    filter: drop-shadow(0 0 0 transparent) brightness(0.8);
+    filter: invert(1) brightness(0.7) drop-shadow(0 0 0 transparent);
   }
   to {
     opacity: 1;
     transform: scale(1);
-    filter: drop-shadow(0 0 40px rgba(180, 180, 190, 0.15)) brightness(1.1);
+    filter: invert(1) brightness(0.92) drop-shadow(0 0 40px rgba(180, 180, 190, 0.2));
   }
 }
 
