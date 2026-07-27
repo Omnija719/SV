@@ -420,7 +420,7 @@ ul {
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
@@ -475,6 +475,12 @@ ul {
   border-color: rgba(29, 185, 84, 0.35);
 }
 
+.platform-icon.bandcamp:hover,
+.platform-card:hover .platform-icon.bandcamp {
+  color: #1da0c3;
+  border-color: rgba(29, 160, 195, 0.4);
+}
+
 .platform-copy h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -500,6 +506,47 @@ ul {
   border-radius: 2px;
   color: var(--text-dim);
   background: rgba(255, 255, 255, 0.02);
+}
+
+.badge-live {
+  color: var(--silver-bright);
+  border-color: rgba(29, 160, 195, 0.45);
+  background: rgba(29, 160, 195, 0.12);
+}
+
+/* Bandcamp embed — sits under platform cards */
+.bandcamp-player {
+  max-width: var(--max);
+  margin: 1.75rem auto 0;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bandcamp-player-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.85rem;
+}
+
+.bandcamp-player-label em {
+  font-style: normal;
+  color: var(--silver);
+  letter-spacing: 0.14em;
+}
+
+.bandcamp-player iframe {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  border: 0;
+  border-radius: 2px;
+  background: #333;
 }
 
 /* ---------- Merch ---------- */
@@ -773,8 +820,13 @@ ul {
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 860px) {
-  .platform-grid,
   .blog-columns,
   .merch-panel {
     grid-template-columns: 1fr;
