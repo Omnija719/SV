@@ -601,6 +601,11 @@ ul {
   max-width: 36ch;
 }
 
+.merch-copy .section-lead strong {
+  color: var(--silver-bright);
+  font-weight: 500;
+}
+
 /* ---------- Blog ---------- */
 .blog {
   border-top: 1px solid var(--border);
