@@ -514,15 +514,19 @@ ul {
   background: rgba(29, 160, 195, 0.12);
 }
 
-/* Bandcamp embed — sits under platform cards */
+/* Bandcamp embeds — sit under platform cards */
 .bandcamp-player {
   max-width: var(--max);
-  margin: 1.75rem auto 0;
+  margin: 1.25rem auto 0;
   padding: 1.25rem 1.25rem 1rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
+}
+
+.platform-grid + .bandcamp-player {
+  margin-top: 1.75rem;
 }
 
 .bandcamp-player-label {
@@ -538,6 +542,18 @@ ul {
   font-style: normal;
   color: var(--silver);
   letter-spacing: 0.14em;
+}
+
+.bandcamp-player-label a {
+  color: var(--silver);
+  letter-spacing: 0.08em;
+  text-transform: none;
+  font-weight: 500;
+  transition: color 0.25s var(--ease);
+}
+
+.bandcamp-player-label a:hover {
+  color: var(--silver-bright);
 }
 
 .bandcamp-player iframe {
